@@ -3,17 +3,14 @@
 exports.modifierWord = function(req, res){
     var data_get = req.body;
 
-    console.log(data_get.remover);
-    var word = "woooody";
+    var input = data_get.word;
+    var eraser = data_get.remover;
 
-    var remover = "o";
-
-    var newword = word.replaceAll(remover, '');
-
-    console.log(newword);
+    var output = input.replaceAll(eraser, '');
+    console.log(output);
 
     var data = {
-        'output' : newword,
+        'output' : output,
     }
 
     console.log(data);
